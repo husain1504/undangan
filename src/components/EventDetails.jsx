@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkedAlt, FaClock, FaCalendarAlt } from 'react-icons/fa';
+import { FaMapMarkedAlt, FaClock } from 'react-icons/fa'; // FaCalendarAlt dihapus karena resepsi hilang
 
 const EventDetails = () => {
   // TANGGAL ACARA (Format: YYYY-MM-DDTHH:MM:SS)
-  // Ganti tanggal ini sesuai keinginanmu nanti
-  const weddingDate = new Date("2025-12-20T08:00:00").getTime();
+  const weddingDate = new Date("2025-12-21T08:00:00").getTime(); // Saya sesuaikan tgl countdown ke tgl 21
 
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
@@ -64,35 +63,29 @@ const EventDetails = () => {
           <TimeBox value={timeLeft.seconds} label="Detik" />
         </motion.div>
 
-        {/* KARTU ACARA (GRID) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* KARTU ACARA (Single Item - Centered) */}
+        <div className="flex justify-center w-full">
           
           {/* AKAD NIKAH */}
           <motion.div 
             whileHover={{ y: -10 }}
-            className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-pink-500"
+            className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-pink-500 w-full max-w-lg"
           >
             <div className="text-4xl text-pink-500 mb-4 flex justify-center"><FaClock /></div>
             <h3 className="text-2xl font-bold text-gray-800 mb-2">Akad Nikah</h3>
-            <p className="text-gray-500 mb-4 font-bold">Sabtu, 20 Desember 2025</p>
-            <p className="text-gray-600">Pukul: 08.00 WIB - Selesai</p>
-            <div className="my-4 border-b border-gray-200"></div>
-            <p className="text-gray-600 text-sm">Masjid Agung Al-Barkah</p>
-            <p className="text-gray-500 text-sm">Jl. Veteran No. 45, Kota Bekasi</p>
-          </motion.div>
 
-          {/* RESEPSI */}
-          <motion.div 
-            whileHover={{ y: -10 }}
-            className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-500"
-          >
-             <div className="text-4xl text-purple-500 mb-4 flex justify-center"><FaCalendarAlt /></div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">Resepsi</h3>
-            <p className="text-gray-500 mb-4 font-bold">Sabtu, 20 Desember 2025</p>
-            <p className="text-gray-600">Pukul: 11.00 WIB - Selesai</p>
-             <div className="my-4 border-b border-gray-200"></div>
-            <p className="text-gray-600 text-sm">Grand Ballroom Hotel Santika</p>
-            <p className="text-gray-500 text-sm">Jl. Jend. Sudirman, Kota Bekasi</p>
+            {/* Tambahan kalimat pengantar agar lebih sopan */}
+            <p className="text-sm text-gray-500 mb-2 italic">Insya Allah akan diselenggarakan pada:</p>
+
+            <p className="text-gray-800 mb-1 font-bold text-lg">Minggu, 21 Desember 2025</p>
+            <p className="text-gray-600">Pukul: 08.00 WIB - Selesai</p>
+            
+            <div className="my-6 border-b border-gray-200"></div>
+            
+            {/* Tambahan keterangan tempat */}
+            <p className="text-sm text-gray-500 mb-2 italic">Bertempat di:</p>
+            <p className="text-gray-800 font-bold text-lg">Masjid Agung Al-Barkah</p>
+            <p className="text-gray-500 text-sm">Jl. Veteran No. 45, Kota Bekasi</p>
           </motion.div>
 
         </div>

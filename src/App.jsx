@@ -1,13 +1,15 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEnvelopeOpenText, FaMusic, FaHeart } from 'react-icons/fa';
+
 import Couple from './components/Couple'; 
 import EventDetails from './components/EventDetails';
-// import Gallery from './components/Gallery'; // Kamu menonaktifkan Gallery, jadi biarkan begini
+// import Gallery from './components/Gallery'; 
 import RSVP from './components/RSVP';       
 import Footer from './components/Footer';
+import FallingPetals from './components/FallingPetals'; // 1. IMPORT KOMPONEN BUNGA
 
-// --- IMPORT MUSIK (Pastikan file bergema.mp3 ada di folder src/assets/) ---
+// --- IMPORT MUSIK ---
 import musicFile from './assets/bergema.mp3'; 
 
 function App() {
@@ -35,13 +37,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-serif overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 font-serif italic leading-relaxed">
       
       {/* --- AUDIO PLAYER --- */}
-      {/* Sekarang src mengambil dari file bergema.mp3 yang di-import di atas */}
       <audio ref={audioRef} src={musicFile} loop />
       
-      {/* Tombol Musik Melayang (Hanya muncul jika sudah dibuka) */}
+      {/* Tombol Musik Melayang */}
       {isOpened && (
         <button 
           onClick={toggleMusic}
@@ -65,7 +66,7 @@ function App() {
 
             <div className="relative z-10 text-center px-4">
               <p className="tracking-widest mb-2">THE WEDDING OF</p>
-              <h1 className="text-6xl font-cursive mb-8 text-pink-200">Ame & Ria</h1>
+              <h1 className="text-6xl font-cursive mb-8 text-pink-200">Hermansah & Ria</h1>
               <button 
                 onClick={openInvitation}
                 className="bg-white text-black px-8 py-3 rounded-full flex items-center gap-2 mx-auto hover:bg-pink-100 transition cursor-pointer"
@@ -83,26 +84,41 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
+            className="relative" // PENTING: Agar FallingPetals bisa diposisikan absolute
         >
-          {/* 1. Header Salam */}
-          <div className="text-center py-10 px-4">
+          
+          {/* 2. EFEK BUNGA JATUH (Di paling belakang) */}
+          <FallingPetals />
+
+          {/* 3. KONTEN DIBUNGKUS z-10 AGAR TIDAK TERTUTUP BUNGA */}
+          
+          {/* Header Salam */}
+          <div className="relative z-10 text-center py-10 px-4">
              <h2 className="text-2xl font-bold text-gray-800">Assalamualaikum Wr. Wb.</h2>
              <p className="text-gray-600 mt-2 max-w-lg mx-auto">
                Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.
              </p>
           </div>
 
-          {/* 2. Komponen Pasangan (Couple) */}
-          <Couple />
+          {/* Komponen Pasangan */}
+          <div className="relative z-10">
+            <Couple />
+          </div>
           
-          {/* 3. Waktu & Lokasi */}
+          {/* Waktu & Lokasi */}
+          <div className="relative z-10">
             <EventDetails />
+          </div>
 
-          {/* 4. RSVP */}
+          {/* RSVP */}
+          <div className="relative z-10">
             <RSVP />
+          </div>
 
-          {/* 6. Footer */}
+          {/* Footer */}
+          <div className="relative z-10">
             <Footer />
+          </div>
 
         </motion.div>
       )}
