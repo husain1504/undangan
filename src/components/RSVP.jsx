@@ -16,7 +16,7 @@ const RSVP = () => {
     }
 
     // --- GANTI NOMOR WA DI SINI (Gunakan format 628...) ---
-    const phoneNumber = "6289529405713"; 
+    const phoneNumber = "6285724810556"; 
     
     // Format Pesan
     const message = `Halo, saya *${name}*.\n\nIngin konfirmasi kehadiran di acara pernikahan Ame & Ria.\n\nStatus: *${status}*\nJumlah Tamu: *${guestCount} orang*\n\nTerima kasih!`;
