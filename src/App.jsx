@@ -8,6 +8,7 @@ import EventDetails from './components/EventDetails';
 import RSVP from './components/RSVP';       
 import Footer from './components/Footer';
 import FallingPetals from './components/FallingPetals'; // 1. IMPORT KOMPONEN BUNGA
+import Gift from './components/Gift';
 
 // --- IMPORT MUSIK ---
 import musicFile from './assets/bergema.mp3'; 
@@ -108,6 +109,11 @@ function App() {
           {/* Waktu & Lokasi */}
           <div className="relative z-10">
             <EventDetails />
+          </div>
+
+          {/* Gift */}
+          <div className="relative z-10">
+            <Gift />
           </div>
 
           {/* RSVP */}

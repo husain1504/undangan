@@ -129,16 +129,8 @@ const Couple = () => {
               </h3>
               <p className="text-sm text-gray-500 mb-3">Amd. Kep</p>
               <p className="text-gray-600 mb-4 text-sm">
-                Putra dari Bpk. Ahmad & Ibu Siti
+                Putra dari Bpk. Nashar Muhammad., S.pd & ibu Rahmatullah
               </p>
-              <motion.a 
-                href="#" 
-                whileHover={{ scale: 1.05 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full text-sm hover:shadow-lg transition-all"
-              >
-                <FaInstagram className="w-4 h-4" />
-                @Hermansah
-              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -228,16 +220,9 @@ const Couple = () => {
               </h3>
               <p className="text-sm text-gray-500 mb-3">S. Kep., Ners</p>
               <p className="text-gray-600 mb-4 text-sm">
-                Putri dari Bpk. Budi & Ibu Rina
+                Putri dari Bpk. Akhmad & ibu Itam
               </p>
-              <motion.a 
-                href="#" 
-                whileHover={{ scale: 1.05 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-full text-sm hover:shadow-lg transition-all"
-              >
-                <FaInstagram className="w-4 h-4" />
-                @Ria
-              </motion.a>
+              
             </motion.div>
           </motion.div>
 
