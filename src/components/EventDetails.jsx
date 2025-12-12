@@ -117,7 +117,7 @@ const EventDetails = () => {
           className="mt-12"
         >
           <a 
-            href="https://goo.gl/maps/contohLinkPeta" // Ganti link gmaps nanti
+            href="https://www.google.com/maps/place/Labuhan+Burung,+Kec.+Buer,+Kabupaten+Sumbawa,+Nusa+Tenggara+Bar./@-8.4219206,116.9355026,22092m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dcc0e6853ea7bd3:0x8c205b18ac6fe5c7!8m2!3d-8.4125565!4d117.0176165!16s%2Fg%2F122f292s!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D"
             target="_blank" 
             rel="noreferrer"
             className="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-3 rounded-full hover:bg-gray-900 transition shadow-lg"
