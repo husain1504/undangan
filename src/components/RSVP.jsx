@@ -19,7 +19,7 @@ const RSVP = () => {
     const phoneNumber = "6285724810556"; 
     
     // Format Pesan
-    const message = `Halo, saya *${name}*.\n\nIngin konfirmasi kehadiran di acara pernikahan Hermansah & Ria.\n\nStatus: *${status}*\nJumlah Tamu: *${guestCount} orang*\n\nTerima kasih!`;
+    const message = `Halo, saya *${name}*.\n\nIngin konfirmasi kehadiran di acara pernikahan Harmansa & Ria.\n\nStatus: *${status}*\nJumlah Tamu: *${guestCount} orang*\n\nTerima kasih!`;
     
     // Buat Link WA
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

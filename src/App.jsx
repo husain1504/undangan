@@ -67,7 +67,7 @@ function App() {
 
             <div className="relative z-10 text-center px-4">
               <p className="tracking-widest mb-2">THE WEDDING OF</p>
-              <h1 className="text-6xl font-cursive mb-8 text-pink-200">Hermansah & Ria</h1>
+              <h1 className="text-6xl font-cursive mb-8 text-pink-200">Harmansa & Ria</h1>
               <button 
                 onClick={openInvitation}
                 className="bg-white text-black px-8 py-3 rounded-full flex items-center gap-2 mx-auto hover:bg-pink-100 transition cursor-pointer"

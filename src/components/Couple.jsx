@@ -125,7 +125,7 @@ const Couple = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-2">
-                Harmansah Purnanda Utama
+                Harmansa Purnanda Utama
               </h3>
               <p className="text-sm text-gray-500 mb-3">Amd. Kep</p>
               <p className="text-gray-600 mb-4 text-sm">

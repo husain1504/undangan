@@ -10,7 +10,7 @@ const Gift = () => {
   const bankName = "BRI"; 
   const accountNumber = "4771-0102-6001-534"; // Format display
   const accountNumberPlain = "477101026001534"; // Format copy
-  const accountName = "HARMANASA PURNANDA UTAMA"; 
+  const accountName = "HARMANSA PURNANDA UTAMA"; 
 
   // --- 2. DATA ALAMAT KIRIM KADO (KARTU BAWAH) ---
   const giftReceiver = "Padaria Nur";
