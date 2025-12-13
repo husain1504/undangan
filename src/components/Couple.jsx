@@ -129,7 +129,7 @@ const Couple = () => {
               </h3>
               <p className="text-sm text-gray-500 mb-3">Amd. Kep</p>
               <p className="text-gray-600 mb-4 text-sm">
-                Putra dari Bpk. Nashar Muhammad., S.pd & ibu Rahmatullah
+                Putra dari Bpk. Nashar Muhammad., S.pd & ibu Rahmatullah (Almh.)
               </p>
             </motion.div>
           </motion.div>
