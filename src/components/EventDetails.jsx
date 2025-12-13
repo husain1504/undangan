@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkedAlt, FaClock, FaCalendarAlt } from 'react-icons/fa'; // Tambahkan FaCalendarAlt
+import { FaMapMarkedAlt, FaClock, FaCalendarAlt } from 'react-icons/fa';
 
 const EventDetails = () => {
   // TANGGAL ACARA (Format: YYYY-MM-DDTHH:MM:SS)
+  // Hitung mundur menuju Akad (20 Des) atau Resepsi (21 Des)
   const weddingDate = new Date("2025-12-20T08:00:00").getTime(); 
 
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -74,21 +75,19 @@ const EventDetails = () => {
             <div className="text-4xl text-pink-500 mb-4 flex justify-center"><FaClock /></div>
             <h3 className="text-2xl font-bold text-gray-800 mb-2">Akad Nikah</h3>
 
-            {/* Tambahan kalimat pengantar agar lebih sopan */}
             <p className="text-sm text-gray-500 mb-2 italic">Insya Allah akan diselenggarakan pada:</p>
 
             <p className="text-gray-800 mb-1 font-bold text-lg">Sabtu, 20 Desember 2025</p>
-            <p className="text-gray-600">Pukul: 08.00 WIB - Selesai</p>
+            <p className="text-gray-600">Pukul: 07.00 WIB - Selesai</p>
             
             <div className="my-6 border-b border-gray-200"></div>
             
-            {/* Tambahan keterangan tempat */}
             <p className="text-sm text-gray-500 mb-2 italic">Bertempat di:</p>
-            <p className="text-gray-800 font-bold text-lg">Masjid Agung Al-Barkah</p>
-            <p className="text-gray-500 text-sm">Jl. Veteran No. 45, Kota Bekasi</p>
+            <p className="text-gray-800 font-bold text-lg">Kediaman Mempelai Pria</p>
+            <p className="text-gray-500 text-sm">Labuhan Burung RT 001 RW 002, Dusun Pernang, Kec. Buer</p>
           </motion.div>
 
-          {/* RESEPSI (Ditambahkan Kembali) */}
+          {/* RESEPSI */}
           <motion.div 
             whileHover={{ y: -10 }}
             className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-500"
@@ -99,12 +98,12 @@ const EventDetails = () => {
             <p className="text-sm text-gray-500 mb-2 italic">Insya Allah akan diselenggarakan pada:</p>
 
             <p className="text-gray-800 mb-1 font-bold text-lg">Minggu, 21 Desember 2025</p>
-            <p className="text-gray-600">Pukul: 11.00 WIB - Selesai</p>
+            <p className="text-gray-600">Pukul: 9.00 WIB - Selesai</p>
              <div className="my-6 border-b border-gray-200"></div>
              
              <p className="text-sm text-gray-500 mb-2 italic">Bertempat di:</p>
-            <p className="text-gray-800 font-bold text-lg">Grand Ballroom Hotel Santika</p>
-            <p className="text-gray-500 text-sm">Jl. Jend. Sudirman, Kota Bekasi</p>
+            <p className="text-gray-800 font-bold text-lg">Kediaman Mempelai Pria</p>
+            <p className="text-gray-500 text-sm">Labuhan Burung RT 001 RW 002, Dusun Pernang, Kec. Buer</p>
           </motion.div>
 
         </div>
@@ -117,7 +116,7 @@ const EventDetails = () => {
           className="mt-12"
         >
           <a 
-            href="https://www.google.com/maps/place/Labuhan+Burung,+Kec.+Buer,+Kabupaten+Sumbawa,+Nusa+Tenggara+Bar./@-8.4219206,116.9355026,22092m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dcc0e6853ea7bd3:0x8c205b18ac6fe5c7!8m2!3d-8.4125565!4d117.0176165!16s%2Fg%2F122f292s!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D"
+            href="https://www.google.com/maps/place//@-8.4632657,117.0356907,501m/data=!3m1!1e3!4m6!1m5!3m4!2zOMKwMjcnNDcuNCJTIDExN8KwMDInMTQuNSJF!8m2!3d-8.4631518!4d117.0373496?hl=id&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D"
             target="_blank" 
             rel="noreferrer"
             className="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-3 rounded-full hover:bg-gray-900 transition shadow-lg"
