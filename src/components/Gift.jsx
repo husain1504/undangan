@@ -16,8 +16,8 @@ const Gift = () => {
   // --- 2. DATA REKENING (KARTU BAWAH - BNI) ---
   // Silakan ganti dengan nomor rekening BNI asli Anda
   const bankName2 = "BNI";
-  const accountNumber2 = "0000-0000-0000-000"; // GANTI INI
-  const accountNumberPlain2 = "000000000000000"; // GANTI INI
+  const accountNumber2 = "976831300"; // GANTI INI
+  const accountNumberPlain2 = "976831300"; // GANTI INI
   const accountName2 = "PADARIA NUR"; // GANTI INI (Biasanya mempelai wanita)
 
   const handleCopy1 = () => {
